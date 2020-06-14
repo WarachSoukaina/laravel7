@@ -1,9 +1,17 @@
 @extends('layout')
-
 @section('content')
-    
-  <h1> {{ $data}}</h1> 
 
-<h2> {{$id}}</h2>
+<h1>{{$post->title}}</h1>
+<p>{{$post->content}}</p>
+<em>{{$post->created_at->diffForHumans()}}</em>
 
+
+<p>
+  Status :
+  @if ($post->active)
+      Enabled
+  @else
+      Disabled
+  @endif
+</p>
 @endsection

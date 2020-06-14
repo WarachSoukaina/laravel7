@@ -13,12 +13,4 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function blog($myid){
-        
-    $posts = "test ";
-    return view('posts.show',[
-        'data' => $posts, 'id'=> $myid
-    ]);
-    
-    }
 }

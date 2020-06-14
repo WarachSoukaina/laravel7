@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/posts/{id}','HomeController@blog')->name('posts');
 Route::get('/home','HomeController@home')->name('home');
 
 Route::view('/','welcome');
+Route::resource('/posts','PostController')->only(['index','show']);
